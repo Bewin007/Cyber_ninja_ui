@@ -7,7 +7,7 @@ body{
     grid-template-columns: auto auto auto auto auto auto auto;
     background-color:white;
     padding: 30px;
-  height: 100px;
+  /* height: 150px; */
   overflow: scroll;
   background-color:#F1F5F8;
 }
@@ -24,8 +24,7 @@ body{
     height: 75px;}
 
   button:hover{
-    background-color:#F1F5F8;
+    background-color:white;
   }
-  body-container{
-    
-  }
+
+

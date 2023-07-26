@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="../Style/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="body" style="width: 100%; height: 100">
+  <!-- <a href="test.html">Test.</a> -->
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <Button>1</Button>
+    </div>
+    <div class="grid-item">
+      <button>2</button>
+    </div>
+    <div class="grid-item">
+      <button>3</button>
+    </div>
+    <div class="grid-item">
+      <button>4</button>
+    </div>
+    <div class="grid-item">
+      <button>5</button>
+    </div>
+    <div class="grid-item">
+      <button>6</button>
+    </div>
+    <div class="grid-item">
+      <button>7</button>
+    </div>
+  </div>
+  <canvas id="bar-chart"></canvas>
+
+    <h1>Blah</h1>
+    <button id="opneBtn">Open</button>
+    <div class="box">
+      <span class="label">CPU (%)</span>
+      <span id="cpu">-</span>
+    </div>
+    <div class="box">
+      <span class="label">Free Mem (%)</span>
+      <span id="mem">-</span>
+    </div>
+    <div class="box">
+      <span class="label">Total Mem (GB)</span>
+      <span id="total-mem">-</span>
+    </div>
+
+
+    
+    <script>
+      const electron = require('electron');
+      const ipcRenderer = electron.ipcRenderer;
+
+      ipcRenderer.on('cpu',(event,data) => {
+        document.getElementById('cpu').innerHTML = data.toFixed(2);
+      });
+      ipcRenderer.on('mem',(event,data) => {
+        document.getElementById('mem').innerHTML = data.toFixed(2);
+      });
+      ipcRenderer.on('total-mem',(event,data) => {
+        document.getElementById('total-mem').innerHTML = data.toFixed(2);
+      });
+      require('../index.js')
+    </script>
+  </div>
+    
+</body>
+</html>
