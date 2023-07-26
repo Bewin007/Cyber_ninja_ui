@@ -1,6 +1,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const os = require('os-utils');
+const Chart = require('chart.js');
 
 let mainWindow;
 
@@ -13,6 +14,7 @@ function createWindow() {
       nodeIntegration: true,
       preload: path.join(__dirname, 'render.js'), // Set the path to the preload script
     },
+
   });
 
   mainWindow.loadFile('./Html/index.html');
