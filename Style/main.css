@@ -7,7 +7,6 @@ body{
     grid-template-columns: auto auto auto auto auto auto auto;
     background-color:white;
     padding: 30px;
-    width: 1500px;
   height: 100px;
   overflow: scroll;
   background-color:#F1F5F8;
@@ -23,11 +22,7 @@ body{
   button{
     width:150px;
     height: 75px;}
+
   button:hover{
     background-color:#F1F5F8;
   }
-  @font-face { font-family: NechaoSharp; src: url('../Component/NechaoSharp.ttf'); } 
-      h1 {
-         font-family: NechaoSharp
-      }
-  
