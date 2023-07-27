@@ -6,23 +6,25 @@
   <link rel="stylesheet" href="../Style/main.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+<body></body>
 
   <style>
-    button {
-    display: inline-block;
-    height: 134px;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-    width: 104px;
+    #navigateButton{
+      position: absolute;
+            bottom: 7%;
+            left: 50%;
+            margin-left: -104.5px; /*104.5px is half of the button's width*/
+            background-color: black;
+            color: white;
+            height:5%;
     }
+    #navigateButton:hover{
+      background-color: #FBC400;
+    }
+    
 
-    #close-image img {
-        display: block;
-        height: 130px;  
-        width: 100px;
-    }
+    
+    
 
     #close-CSS {
         background-image: url( 'http://thinkingstiff.com/images/matt.jpg' );
@@ -32,15 +34,9 @@
     }
   </style>
   <div class="body" style="width: 100%; height: 100">
-  <!-- <a href="test.html">Test.</a> -->
+  
 
   <div class="grid-container">
-    <div class="grid-item">
-      <!-- <input type="image" id="myimage" style="height:200px;width:200px;" src="../components/FTK imager copy.png" />  -->
-
-      <button id="close-image"><img src="../components/FTK imager copy.png"></button>
-      <!-- <button id="close-CSS"></button> -->
-    </div>
     <div class="grid-item">
       <input type="image" id="myimage" style="height:200px;width:200px;" src="../components/ESP.Xplico.png" /> 
     </div>
@@ -56,11 +52,19 @@
     <div class="grid-item">
       <input type="image" id="myimage" style="height:200px;width:200px;" src="../components/wireshark.jpeg" /> 
     </div>
-    <div class="grid-item">
-      <input type="image" id="myimage" style="height:200px;width:200px;" src="../components/wireshark.jpeg" /> 
-    </div>
   </div>
   <canvas id="bar-chart"></canvas>
+  <button id="navigateButton" class="button">Next</button>
+  <script>
+    // Get a reference to the button element
+    const navigateButton = document.getElementById("navigateButton");
+
+    // Add a click event listener to the button
+    navigateButton.addEventListener("click", function() {
+        // Navigate to index.html when the button is clicked
+        window.location.href = "dashboard2.html";
+    });
+</script>
 
     <!-- <h1>Blah</h1>
     <button id="opneBtn">Open</button>
