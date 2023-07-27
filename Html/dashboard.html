@@ -7,12 +7,39 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
+  <style>
+    button {
+    display: inline-block;
+    height: 134px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 104px;
+    }
+
+    #close-image img {
+        display: block;
+        height: 130px;  
+        width: 100px;
+    }
+
+    #close-CSS {
+        background-image: url( 'http://thinkingstiff.com/images/matt.jpg' );
+        background-size: 100px 130px;
+        height: 134px;  
+        width: 104px;
+    }
+  </style>
   <div class="body" style="width: 100%; height: 100">
   <!-- <a href="test.html">Test.</a> -->
 
   <div class="grid-container">
     <div class="grid-item">
-      <input type="image" id="myimage" style="height:200px;width:200px;" src="../components/re.png" /> 
+      <!-- <input type="image" id="myimage" style="height:200px;width:200px;" src="../components/FTK imager copy.png" />  -->
+
+      <button id="close-image"><img src="../components/FTK imager copy.png"></button>
+      <!-- <button id="close-CSS"></button> -->
     </div>
     <div class="grid-item">
       <input type="image" id="myimage" style="height:200px;width:200px;" src="../components/ESP.Xplico.png" /> 
@@ -35,7 +62,7 @@
   </div>
   <canvas id="bar-chart"></canvas>
 
-    <h1>Blah</h1>
+    <!-- <h1>Blah</h1>
     <button id="opneBtn">Open</button>
     <div class="box">
       <span class="label">CPU (%)</span>
@@ -48,11 +75,11 @@
     <div class="box">
       <span class="label">Total Mem (GB)</span>
       <span id="total-mem">-</span>
-    </div>
+    </div> -->
 
 
     
-    <script>
+    <!-- <script>
       const electron = require('electron');
       const ipcRenderer = electron.ipcRenderer;
 
@@ -66,7 +93,7 @@
         document.getElementById('total-mem').innerHTML = data.toFixed(2);
       });
       require('../index.js')
-    </script>
+    </script> -->
   </div>
     
 </body>
