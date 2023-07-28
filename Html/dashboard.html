@@ -10,8 +10,8 @@
 <body>
 
   <style>
-    #navigateButton{
-      position: absolute;
+    #Disk{
+        position: absolute;
             bottom: 7%;
             left: 50%;
             margin-left: -104.5px; /*104.5px is half of the button's width*/
@@ -19,10 +19,26 @@
             background-color: black;
             color: white;
             height:5%;
+
     }
-    #navigateButton:hover{
+    #Disk:hover{
+        background-color:#FBC400;
+    }
+    #Network{
+      position: absolute;
+            bottom: 7%;
+            left: 50%;
+            margin-left: 100.5px; /*104.5px is half of the button's width*/
+            margin-bottom: 10%;
+            background-color: black;
+            color: white;
+            height:5%;
+    }
+    #Network:hover{
       background-color: #FBC400;
     }
+
+  
     
 
     
@@ -31,6 +47,9 @@
     
   </style>
   <div class="body" style="width: 100%; height: 100">
+    <p style="align-items: center; color: #FBC400;">
+      Memory
+    </p>
   
 
   <div class="grid-container">
@@ -51,15 +70,24 @@
     </div>
   </div>
   <canvas id="bar-chart"></canvas>
-  <button id="navigateButton" class="button">Next</button>
+  <button id="Disk" class="button">Disk</button>
+    <button id="Network" class="button">Network</button>
   <script>
     // Get a reference to the button element
-    const navigateButton = document.getElementById("navigateButton");
+    const navigateButton2 = document.getElementById("Disk");
 
     // Add a click event listener to the button
-    navigateButton.addEventListener("click", function() {
+    navigateButton2.addEventListener("click", function() {
         // Navigate to index.html when the button is clicked
         window.location.href = "dashboard2.html";
+    });
+    // Get a reference to the button element
+    const navigateButton3 = document.getElementById("Network");
+
+    // Add a click event listener to the button
+    navigateButton3.addEventListener("click", function() {
+        // Navigate to index.html when the button is clicked
+        window.location.href = "dashboard3.html";
     });
 
 
