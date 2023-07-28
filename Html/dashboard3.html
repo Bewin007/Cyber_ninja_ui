@@ -35,7 +35,7 @@
     width:150px;
     height: 75px;
   }
-    #navigateButton{
+    #memory{
       position: absolute;
             bottom: 7%;
             left: 50%;
@@ -45,9 +45,18 @@
             color: white;
             height:5%;
     }
-    #navigateButton:hover{
-      background-color: #FBC400;
+    #disk{
+        position: absolute;
+            bottom: 7%;
+            left: 50%;
+            margin-left: -104.5px; /*104.5px is half of the button's width*/
+            margin-bottom: 10%;
+            background-color: black;
+            color: white;
+            height:5%;
+
     }
+    
 
   
   </style>
@@ -73,20 +82,26 @@
           </div>
         </div>
     </div>   
-    <button id="navigateButton" class="button">Next</button>
+    <button id="Memory" class="button">Memory</button>
+    <button id="Disk" class="button">Disk</button>
   <script>
     // Get a reference to the button element
-    const navigateButton = document.getElementById("navigateButton");
+    const navigateButton1  = document.getElementById("Memory");
 
     // Add a click event listener to the button
-    navigateButton.addEventListener("click", function() {
+    navigateButton1.addEventListener("click", function() {
         // Navigate to index.html when the button is clicked
-        window.location.href = "dashboard3.html";
-    });
+        window.location.href = "dashboard1.html";
+    }); 
+    // Get a reference to the button element
+    const navigateButton2 = document.getElementById("Disk");
 
-
-    
-</script> 
+    // Add a click event listener to the button
+    navigateButton2.addEventListener("click", function() {
+        // Navigate to index.html when the button is clicked
+        window.location.href = "dashboard2.html";
+    }); 
+    </script>
     
     
 </body>
